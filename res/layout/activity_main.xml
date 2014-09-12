@@ -135,12 +135,35 @@
             android:textSize="17dp" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout5"
+        android:layout_below="@+id/linearLayout5" >
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加密結果："
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="3" />
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/linearLayout5"
-        android:layout_below="@+id/linearLayout5"
+        android:layout_alignLeft="@+id/linearLayout6"
+        android:layout_below="@+id/linearLayout6"
         android:text="解密" />
 
     <LinearLayout

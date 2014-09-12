@@ -38,6 +38,7 @@ public class MainActivity extends Activity {
     private TextView createKeyTimeTxt = null;
     private Button encryptionBtn = null;
     private TextView encryptionTimeTxt = null;
+    private EditText encryptionTxt = null;
     private Button doAllBtn = null;
     private TextView doAllTimeTxt = null;
     private Button decryptionBtn = null;
@@ -61,6 +62,7 @@ public class MainActivity extends Activity {
         createKeyTimeTxt = (TextView) findViewById(R.id.textView8);
         encryptionBtn = (Button) findViewById(R.id.button1);
         encryptionTimeTxt = (TextView) findViewById(R.id.textView4);
+        encryptionTxt = (EditText) findViewById(R.id.editText2);
         doAllBtn = (Button) findViewById(R.id.button4);
         doAllTimeTxt = (TextView) findViewById(R.id.textView10);
         decryptionBtn = (Button) findViewById(R.id.button2);
@@ -188,7 +190,9 @@ public class MainActivity extends Activity {
             }
             
             encryptionByt = out.toByteArray();
-            Log.i("test", new String(encryptionByt));
+            String encryptionStr = new String(encryptionByt);
+            encryptionTxt.setText(encryptionStr);
+            Log.i("test", encryptionStr);
             
             end = SystemClock.elapsedRealtime();
             encryptionTimeTxt.setText(Double.toString((end - star)/1000.0));
